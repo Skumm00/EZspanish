@@ -12,35 +12,47 @@
 <body class="flex justify-center">
 
   <section>
-    <div x-data="{ open: false }" class="fixed z-50 w-full px-8 py-4 transition-all duration-1000 rounded-full mt-4 max-w-2xl inset-x-0 mx-auto ease-in-out transform">
+    <div x-data="{ open: false }" class="fixed z-50 w-full px-8 py-4 transition-all bg-white duration-1000 rounded-full mt-4 max-w-2xl inset-x-0 mx-auto ease-in-out transform">
         <div class="flex flex-col w-full p-2 mx-auto md:flex-row md:items-center md:justify-between">
             <div class="flex flex-row items-center justify-between">
-                <span class="font-bold tracking-tighter text-black uppercase">codefair</span>
+                <span class="font-bold tracking-tighter text-black uppercase text-xl">codefair</span>
                 <button class="md:hidden focus:outline-none" @click="open = !open">
                     ☰
                 </button>
             </div>
-            <nav :class="{'hidden': !open, 'flex': open}" class="flex-col md:flex-row flex-grow gap-8 pb-4 md:pb-0 lg:ml-auto justify-end font-semibold uppercase hidden md:flex">
-                <a href="#" class="text-black">about</a>
-                <a href="#" class="text-black">work</a>
-                <a href="#" class="text-black">blog</a>
+            <nav :class="{'hidden': !open, 'flex': open}" class="flex-col md:flex-row flex-grow gap-8 pb-4 md:pb-0 lg:ml-auto justify-end font-semibold uppercase hidden md:flex text-lg">
+                <a href="#" class="text-black">About</a>
+                <a href="#" class="text-black">Quizes</a>
+                <a href="#" class="text-black">Notes</a>
             </nav>
         </div>
     </div>
 
 
-      <div class="bg-white">
-          <div class="px-8 py-24 mx-auto text-center md:px-12 lg:px-24 lg:pt-64 text-zinc-500">
-              <p class="max-w-xl mx-auto text-4xl text-black font-medium uppercase">
-                make your coding expierence way better
-              </p>
-              <div class="grid grid-cols-1 gap-8 mx-auto gap-y-28 mt-24 sm:grid-cols-1 max-w-2xl">
-                  <a href="#_">
-                      <div>
-                          <img class="duration-500 w-full rounded-3xl shadow hover:shadow-3xl hover:-translate-y-12" src="https://i.pinimg.com/564x/eb/b3/bd/ebb3bd6c322463cee8b7b17659792830.jpg">
-                      </div>
-                  </a>
-
+      <div class="bg-white w-full justify-center items-center">
+          <div class="px-8 py-24 mx-auto text-center md:px-12 lg:px-24 lg:pt-64 ">
+            <div class="sm:flex">
+              <div class="mb-4 p-6 flex-shrink-0 sm:mb-0 sm:mr-4">
+    
+                <h4 class="text-4xl font-bold">Learn to be the <span class = "text-indigo-400">best</span> you.</h4>
+                <p class="mt-1 text-lg text-grey-500">Sign up for our free and no login required mentorship in which you can create To-Do lists <br> for your  work and create quizes that will help you to keep and expand your knowledge. <br> That to, more and more functions and addons will be implemented, so that you <br> can become the developer that you always wanted to be.</p>
+                <span class = "flex flex-row gap-4 justify-center items-center p-10">
+                <button class = "inline-block bg-indigo-400 text-center hover:opacity-75 text-white font-bold py-4 px-6 mt-4 hover:cursor-pointer ">Start Now</button>
+                   <button class = "inline-block  hover:opacity-75 text-black font-bold py-4 text-center px-6 mt-4 text-grey-400 hover:cursor-pointer">About</button>
+                  </span>
+              </div>
+              <div>
+                <img class=" w-full" src = "https://fastly.picsum.photos/id/1/400/500.jpg?hmac=bHhgZLJPDLjHZeXqDLpjNWC3Boysznq70Lqh9otYXk4">  
+                </img>
+                
+              </div>
+            </div>
+            
+              </div>
+          </div>
+      </div>
+      <div class="pointer-events-none fixed inset-x-0 bottom-0 sm:flex sm:justify-center sm:px-6 sm:pb-5 lg:px-8">
+  </section>
 
 </body>
 </html>

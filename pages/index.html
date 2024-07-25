@@ -12,18 +12,18 @@
 <body class="flex justify-center">
 
   <section>
-    <div x-data="{ open: false }" class="fixed z-50 w-full px-8 py-4 transition-all bg-white duration-1000 rounded-full mt-4 max-w-2xl inset-x-0 mx-auto ease-in-out transform">
+    <div  class="fixed z-50 w-full px-8 py-4 transition-all bg-black text-white duration-1000 rounded-full mt-4 max-w-2xl inset-x-0 mx-auto ease-in-out transform">
         <div class="flex flex-col w-full p-2 mx-auto md:flex-row md:items-center md:justify-between">
             <div class="flex flex-row items-center justify-between">
-                <span class="font-bold text-black uppercase text-xl">codefair</span>
+                <span class="font-bold text-white uppercase text-xl">codefair</span>
                 <button class="md:hidden focus:outline-none" @click="open = !open">
                     ☰
                 </button>
             </div>
             <nav :class="{'hidden': !open, 'flex': open}" class="flex-col md:flex-row flex-grow gap-8 pb-4 md:pb-0 lg:ml-auto justify-end font-semibold uppercase hidden md:flex text-lg">
-                <a href="#" class="text-black">About</a>
-                <a href="#" class="text-black">Quizes</a>
-                <a href="#" class="text-black">Notes</a>
+                <a href="#" class="text-white">About</a>
+                <a href="#" class="text-white">Quizes</a>
+                <a href="#" class="text-white">To Do</a>
             </nav>
         </div>
     </div>
@@ -165,7 +165,7 @@
       </div>
     </div>
 
-    <div class="relative bg-white py-16 sm:py-24">
+    <div class="relative bg-white py-16 sm:py-24" >
       <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-start">
         <div class="relative sm:py-16 lg:py-0">
           <div aria-hidden="true" class="hidden sm:block lg:absolute lg:inset-y-0 lg:right-0 lg:w-screen">
@@ -182,12 +182,12 @@
           <div class="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0 lg:max-w-none lg:py-20">
           
             <div class="relative pt-64 pb-10 rounded-2xl shadow-xl overflow-hidden">
-      
-              <div class="absolute inset-0 bg-indigo-400 mix-blend-multiply"></div>
-              <div class="absolute inset-0 bg-gradient-to-t from-indigo-600 via-indigo-600 opacity-90"></div>
+              <img class="absolute inset-0 h-full w-full object-cover" src="https://fastly.picsum.photos/id/4/700/500.jpg?hmac=QVghZbWM9n--t8UMK4Ax4Hr8TOVPSyZUq1qbopzfc5M" alt="">
+              <div class="absolute inset-0 bg-indigo-500 mix-blend-multiply"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-indigo-600 via-indigo-600 opacity-75"></div>
               <div class="relative px-8">
                 <div>
-                  
+                
                 </div>
                 <blockquote class="mt-8">
                   <div class="relative text-lg font-medium text-white md:flex-grow">
@@ -196,7 +196,7 @@
                   </div>
 
                   <footer class="mt-4">
-                    <p class="text-base font-semibold text-indigo-200">Jasey Williams, User at Codefair</p>
+                    <p class="text-base font-semibold text-indigo-200">John Richards, User at Codefair</p>
                   </footer>
                 </blockquote>
               </div>
@@ -209,12 +209,13 @@
           <div class="pt-12 sm:pt-16 lg:pt-20">
             <h2 class="text-3xl text-gray-900 font-extrabold tracking-tight sm:text-4xl">On a mission to empower <span class = "text-indigo-400">everybody</span></h2>
             <div class="mt-6 text-gray-500 space-y-6">
-              <p class="text-lg">PUT STUFF HERE!.</p>
+              <p class="text-lg">Welcome to StudySite, your ultimate learning hub! We offer a comprehensive suite of tools to help you excel in various subjects. Access a vast library of materials, create flashcards, take practice quizzes, and track your progress. Customize your study sessions by organizing your own materials, and connect with peers and educators to share resources and collaborate. For developers and educators, our robust API provides access to a wide array of pre-made quiz questions. Join StudySite today and elevate your learning experience!</p>
             </div>
           </div>
 
     </div>
       <div class="pointer-events-none fixed inset-x-0 bottom-0 sm:flex sm:justify-center sm:px-6 sm:pb-5 lg:px-8">
+        
   </section>
 
 </body>

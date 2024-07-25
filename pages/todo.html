@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="out.css">
+  <title>Tailwind CSS</title>
+  <script src = "script.js"></script>
+</head>
+<body class="flex justify-center">
+  <div  class="fixed z-50 w-full px-8 py-4 transition-all bg-black text-white duration-1000 rounded-full mt-4 max-w-2xl inset-x-0 mx-auto ease-in-out transform">
+      <div class="flex flex-col w-full p-2 mx-auto md:flex-row md:items-center md:justify-between">
+          <div class="flex flex-row items-center justify-between">
+              <span class="font-bold text-white uppercase text-xl">codefair</span>
+              <button class="md:hidden focus:outline-none" @click="open = !open">
+                  ☰
+              </button>
+          </div>
+          <nav :class="{'hidden': !open, 'flex': open}" class="flex-col md:flex-row flex-grow gap-8 pb-4 md:pb-0 lg:ml-auto justify-end font-semibold uppercase hidden md:flex text-lg">
+              <a href="#" class="text-white">About</a>
+              <a href="#" class="text-white">Quizes</a>
+              <a href="#" class="text-white">To Do</a>
+          </nav>
+      </div>
+  </div>
+</body>

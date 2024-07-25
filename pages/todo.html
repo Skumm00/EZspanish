@@ -57,5 +57,42 @@
     list.ClassName = "border-b border-gray-200 flex-items-center justify-between py-4";
     list.innerHTML = '<label class = "flex-items-center"><input type = "checkbox" class = "mr-2"><span>${task}</span></label> <div><button class = "text-red-400 hover:text-red-700 mr-2 delete-btn">Delete</button> <button class = "text-indigo-400 hover:text-indigo-700 mr-2 edit-btn">Edit</button> </div>';
   }
+  todoList.appendChild(list);
+  //Event Listner
+  const checkbox = li.QuerySelector('input[type = "checkbox"]');
+  checkbox.addEventListener('change',function (){
+    const TaskText = this.NextElementSibling;
+    if (this.checked){
+      taskText.classList.add('complete');
+    } else {
+      taskText.classList.remove('complete');
+    }
+  });
+  document.getElementById("todo-list")
+    .addEventListener("click",
+      function (event) {
+          if (event.target.classList.contains("delete-btn")) {
+              event.target.parentElement.parentElement.remove();
+          }
+      });
+
+  //Button
+  document.getElementById("todo-list")
+    .addEventListener("click",
+      function (event) {
+          if (event.target.classList.contains("edit-btn")) {
+              const taskText = event.target.
+                  parentElement.parentElement.querySelector("span");
+              const newText = 
+                    prompt("Enter new task", taskText.textContent);
+              if (newText !== null) {
+                  taskText.textContent = newText.trim();
+              }
+          }
+      });
+
+  //Default
+  const defaultTasks = ["HTML,CSS,JS", "BOOTSTRAP/TAILWIND", "REACT", "NEXT.JS"];
+  defaultTasks.forEach(task => addTask(task));
 </script>
 </body>

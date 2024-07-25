@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+       <div class="fixed inset-x-0 z-50 mx-auto mt-4 w-full max-w-2xl transform rounded-full bg-black px-8 py-4 text-white transition-all duration-1000 ease-in-out">
+          <div class="mx-auto flex w-full flex-col p-2 md:flex-row md:items-center md:justify-between">
+            <div class="flex flex-row items-center justify-between">
+              <a href="index.html"><span class="text-xl font-bold uppercase text-white">codefair</span></a>
+            </div>
+            <nav class="flex-grow flex-col justify-end gap-8 pb-4 text-lg font-semibold uppercase md:flex md:flex-row lg:ml-auto">
+              <a href="#about" class="text-white">About</a>
+              <a href="quiz.html" class="text-white">Quizes</a>
+              <a href="todo.html" class="text-white">To Do</a>
+            </nav>
+          </div>
+        </div>
+        <br />
+        <br />
+        <div class="rounded p-20">
+          <div class="justify-center bg-white p-16 text-center shadow">
+            <h2 class="text-xs font-medium uppercase tracking-wide text-gray-500">All Tests/Quizes</h2>
+            <ul role="list" class="mt-3 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
+              <li class="col-span-1 flex rounded-md shadow-sm">
+                <div class="flex w-16 flex-shrink-0 items-center justify-center rounded-l-md bg-red-600 text-sm font-medium text-white">PY</div>
+                <div class="flex flex-1 items-center justify-between truncate rounded-r-md border-b border-r border-t border-gray-200 bg-white">
+                  <div class="flex-1 truncate px-4 py-2 text-sm">
+                    <a href="#" class="font-medium text-gray-900 hover:text-gray-600">Python</a>
+                    <p class="text-gray-500">50 Questions</p>
+                  </div>
+                  <div class="flex-shrink-0 pr-2">
+                    <button type="button" class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-transparent bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                      <span class="sr-only">Open options</span>
+                      <!-- Heroicon name: solid/dots-vertical -->
+                      <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </li>
+
+              <li class="col-span-1 flex rounded-md shadow-sm">
+                <div class="flex w-16 flex-shrink-0 items-center justify-center rounded-l-md bg-green-600 text-sm font-medium text-white">DJ</div>
+                <div class="flex flex-1 items-center justify-between truncate rounded-r-md border-b border-r border-t border-gray-200 bg-white">
+                  <div class="flex-1 truncate px-4 py-2 text-sm">
+                    <a href="#" class="font-medium text-gray-900 hover:text-gray-600">DJANGO</a>
+                    <p class="text-gray-500">54 Questions</p>
+                  </div>
+                  <div class="flex-shrink-0 pr-2">
+                    <button type="button" class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-transparent bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                      <span class="sr-only">Open options</span>
+                      <!-- Heroicon name: solid/dots-vertical -->
+                      <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </li>
+
+              <li class="col-span-1 flex rounded-md shadow-sm">
+                <div class="flex w-16 flex-shrink-0 items-center justify-center rounded-l-md bg-yellow-500 text-sm font-medium text-white">RE</div>
+                <div class="flex flex-1 items-center justify-between truncate rounded-r-md border-b border-r border-t border-gray-200 bg-white">
+                  <div class="flex-1 truncate px-4 py-2 text-sm">
+                    <a href="#" class="font-medium text-gray-900 hover:text-gray-600">React/FrameWorks</a>
+                    <p class="text-gray-500">42 Questions</p>
+                  </div>
+                  <div class="flex-shrink-0 pr-2">
+                    <button type="button" class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-transparent bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                      <span class="sr-only">Open options</span>
+
+                      <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </li>
+
+              <li class="col-span-1 flex rounded-md shadow-sm">
+                <div class="flex w-16 flex-shrink-0 items-center justify-center rounded-l-md bg-violet-500 text-sm font-medium text-white bg-black">JS</div>
+                <div class="flex flex-1 items-center justify-between truncate rounded-r-md border-b border-r border-t border-gray-200 bg-white">
+                  <div class="flex-1 truncate px-4 py-2 text-sm">
+                    <a href="#" class="font-medium text-gray-900 hover:text-gray-600">Javascript</a>
+                    <p class="text-gray-500">29 Questions</p>
+                  </div>
+                  <div class="flex-shrink-0 pr-2">
+                    <button type="button" class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-transparent bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                      <span class="sr-only">Open options</span>
+
+                      <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+</body>
+</html>

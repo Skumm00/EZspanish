@@ -10,15 +10,13 @@
   <div  class="fixed z-50 w-full px-8 py-4 transition-all bg-black text-white duration-1000 rounded-full mt-4 max-w-2xl inset-x-0 mx-auto ease-in-out transform">
       <div class="flex flex-col w-full p-2 mx-auto md:flex-row md:items-center md:justify-between">
           <div class="flex flex-row items-center justify-between">
-              <span class="font-bold text-white uppercase text-xl">codefair</span>
-              <button class="md:hidden focus:outline-none" @click="open = !open">
-                  ☰
-              </button>
+              <a href = "index.html"><span class="font-bold text-white uppercase text-xl">codefair</span></a>
+
           </div>
-          <nav :class="{'hidden': !open, 'flex': open}" class="flex-col md:flex-row flex-grow gap-8 pb-4 md:pb-0 lg:ml-auto justify-end font-semibold uppercase hidden md:flex text-lg">
-              <a href="#" class="text-white">About</a>
-              <a href="#" class="text-white">Quizes</a>
-              <a href="#" class="text-white">To Do</a>
+          <nav  class="flex-col md:flex-row flex-grow gap-8 pb-4 lg:ml-auto justify-end font-semibold uppercase md:flex text-lg">
+              <a href="#about" class="text-white">About</a>
+              <a href="quiz.html" class="text-white">Quizes</a>
+              <a href="todo.html" class="text-white">To Do</a>
           </nav>
       </div>
   </div>

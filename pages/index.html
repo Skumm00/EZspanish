@@ -15,15 +15,13 @@
     <div  class="fixed z-50 w-full px-8 py-4 transition-all bg-black text-white duration-1000 rounded-full mt-4 max-w-2xl inset-x-0 mx-auto ease-in-out transform">
         <div class="flex flex-col w-full p-2 mx-auto md:flex-row md:items-center md:justify-between">
             <div class="flex flex-row items-center justify-between">
-                <span class="font-bold text-white uppercase text-xl">codefair</span>
-                <button class="md:hidden focus:outline-none" @click="open = !open">
-                    ☰
-                </button>
+                <a href = "index.html"><span class="font-bold text-white uppercase text-xl">codefair</span></a>
+             
             </div>
-            <nav :class="{'hidden': !open, 'flex': open}" class="flex-col md:flex-row flex-grow gap-8 pb-4 md:pb-0 lg:ml-auto justify-end font-semibold uppercase hidden md:flex text-lg">
-                <a href="#" class="text-white">About</a>
-                <a href="#" class="text-white">Quizes</a>
-                <a href="#" class="text-white">To Do</a>
+            <nav  class="flex-col md:flex-row flex-grow gap-8 pb-4 lg:ml-auto justify-end font-semibold uppercase md:flex text-lg">
+                <a href="#about" class="text-white">About</a>
+                <a href="quiz.html" class="text-white">Quizes</a>
+                <a href="todo.html" class="text-white">To Do</a>
             </nav>
         </div>
     </div>
@@ -37,8 +35,8 @@
                 <h4 class="text-6xl font-bold p-6">Learn to be the <span class = "text-indigo-400">best</span> you.</h4>
                 <p class="mt-1 text-lg text-grey-500">Sign up for our free and no login required mentorship in which you can create To-Do lists <br> for your  work and create quizes that will help you to keep and expand your knowledge. <br> That to, more and more functions and addons will be implemented, so that you <br> can become the developer that you always wanted to be.</p>
                 <span class = "flex flex-row gap-4 justify-center items-center p-10">
-                <button class = " bg-indigo-400 text-center hover:opacity-75 text-white font-bold py-4 px-6 mt-4 hover:cursor-pointer ">Start Now</button>
-                   <button class = "inline-block  hover:opacity-75 text-black font-bold py-4 text-center px-6 mt-4 text-grey-400 hover:cursor-pointer">About</button>
+              <a href = "quiz.html">  <button class = " bg-indigo-400 text-center hover:opacity-75 text-white font-bold py-4 px-6 mt-4 hover:cursor-pointer ">Start Now</button></a>
+               <a href = "#about">  <button class = "inline-block  hover:opacity-75 text-black font-bold py-4 text-center px-6 mt-4 text-grey-400 hover:cursor-pointer">About</button></a>
                   </span>
               </div>
               <div>
@@ -209,7 +207,7 @@
           <div class="pt-12 sm:pt-16 lg:pt-20">
             <h2 class="text-3xl text-gray-900 font-extrabold tracking-tight sm:text-4xl">On a mission to empower <span class = "text-indigo-400">everybody</span></h2>
             <div class="mt-6 text-gray-500 space-y-6">
-              <p class="text-lg">Welcome to StudySite, your ultimate learning hub! We offer a comprehensive suite of tools to help you excel in various subjects. Access a vast library of materials, create flashcards, take practice quizzes, and track your progress. Customize your study sessions by organizing your own materials, and connect with peers and educators to share resources and collaborate. For developers and educators, our robust API provides access to a wide array of pre-made quiz questions. Join StudySite today and elevate your learning experience!</p>
+              <p class="text-lg" id = "about">Welcome to StudySite, your ultimate learning hub! We offer a comprehensive suite of tools to help you excel in various subjects. Access a vast library of materials, create flashcards, take practice quizzes, and track your progress. Customize your study sessions by organizing your own materials, and connect with peers and educators to share resources and collaborate. For developers and educators, our robust API provides access to a wide array of pre-made quiz questions. Join StudySite today and elevate your learning experience!</p>
             </div>
           </div>
 

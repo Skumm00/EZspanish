@@ -1048,6 +1048,10 @@ video {
   padding: 4rem;
 }
 
+.p-12 {
+  padding: 3rem;
+}
+
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -1299,6 +1303,11 @@ video {
 
 .hover\:cursor-pointer:hover {
   cursor: pointer;
+}
+
+.hover\:bg-indigo-500:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(99 102 241 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-indigo-600:hover {

@@ -35,7 +35,7 @@
             <div class="flex-shrink-0 pr-2">
               <button type="button" class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-transparent bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
                 <span class="sr-only">Open options</span>
-                <!-- Heroicon name: solid/dots-vertical -->
+               
                 <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                   <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
                 </svg>
@@ -54,7 +54,7 @@
             <div class="flex-shrink-0 pr-2">
               <button type="button" class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-transparent bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
                 <span class="sr-only">Open options</span>
-                <!-- Heroicon name: solid/dots-vertical -->
+              
                 <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                   <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
                 </svg>
@@ -105,14 +105,54 @@
   </div>
 
   <div class = "justify-center text-center p-20">
-  <div class ="flex flex-col items-start justify-center text-center p-20 bg-white shadow">
-  <h4 class="mt-10 text-xl  text-black/60">Question 1 of 50</h4>
+  <div class ="flex flex-col items-start justify-center text-center p-20 bg-white shadow" id = "questionfield">
+  <h4 class="mt-10 text-xl  text-black/60">Question <span id = "question"> 1</span> of 50</h4>
   <div class="mt-4 text-2xl text-black">
   What type of framework is Django?(example question)
   </div>
-  <div class="flex items-center w-full py-4 pl-5 m-2 ml-0 space-x-2 border-2 cursor-pointer border-black/10 rounded-xl bg-black/5"><input type="radio" name="Frontend" value="Frontend" class="w-6 h-6 bg-black"><p class="ml-6 text-black">Frontend</p></div>
-  <div class="flex items-center w-full py-4 pl-5 m-2 ml-0 space-x-2 border-2 cursor-pointer border-black/10 rounded-xl bg-black/5"><input type="radio" name="Frontend" value="Frontend" class="w-6 h-6 bg-black"><p class="ml-6 text-black">Backend</p></div>
-  <div class="flex items-center w-full py-4 pl-5 m-2 ml-0 space-x-2 border-2 cursor-pointer border-black/10 rounded-xl bg-black/5"><input type="radio" name="Frontend" value="Frontend" class="w-6 h-6 bg-black"><p class="ml-6 text-black">HTML</p></div>
-    <div class="flex items-center w-full py-4 pl-5 m-2 ml-0 space-x-2 border-2 cursor-pointer border-black/10 rounded-xl bg-black/5"><input type="radio" name="Frontend" value="Frontend" class="w-6 h-6 bg-black"><p class="ml-6 text-black">Example Question</p></div>
-    <div class="flex justify-between w-full mt-4 text-white"><button class="p-12 py-3 bg-indigo-400 rounded-lg hover:bg-indigo-500 ">Previous</button><button class=" py-3 p-12 bg-indigo-400 rounded-lg hover:bg-indigo-500">Next</button></div> 
-
+  <div class="flex items-center w-full py-4 pl-5 m-2 ml-0 space-x-2 border-2 cursor-pointer border-black/10 rounded-xl bg-black/5"><input type="radio" name="Frontend" value="Frontend" class="w-6 h-6 bg-black">
+    <p class="ml-6 text-black">Frontend</p></div>
+  <div class="flex items-center w-full py-4 pl-5 m-2 ml-0 space-x-2 border-2 cursor-pointer border-black/10 rounded-xl bg-black/5">
+    <input type="radio" name="Frontend" value="Frontend" class="w-6 h-6 bg-black"><p class="ml-6 text-black">Backend</p></div>
+  <div class="flex items-center w-full py-4 pl-5 m-2 ml-0 space-x-2 border-2 cursor-pointer border-black/10 rounded-xl bg-black/5">
+    <input type="radio" name="Frontend" value="Frontend" class="w-6 h-6 bg-black"><p class="ml-6 text-black">HTML</p></div>
+    <div class="flex items-center w-full py-4 pl-5 m-2 ml-0 space-x-2 border-2 cursor-pointer border-black/10 rounded-xl bg-black/5">
+      <input type="radio" name="Frontend" value="Frontend" class="w-6 h-6 bg-black"><p class="ml-6 text-black">Example Question</p></div>
+    <div class="flex justify-between w-full mt-4 text-white"><button class="p-12 py-3 bg-indigo-400 rounded-lg hover:bg-indigo-500 " onclick = "previousQuestion()">Previous</button><button class=" py-3 p-12 bg-indigo-400 rounded-lg hover:bg-indigo-500" onclick = "nextQuestion()">Next</button></div> 
+<script>
+  const questionElement = document.getElementById("question");
+  let question = 1;
+  
+//for the next question button
+  
+  function nextQuestion() {
+    question++;
+    questionElement.textContent = question;
+  if (question >= 51){
+    questionElement.textContent = 50;
+    question--;
+    questionElement.textContent = question;
+  }
+  //If User Finishes Quiz
+    if (question == 50){
+      document.getElementById('questionfield').innerHTML = '<h1 class = "text-center justify-content font-bold">YOU FINISHED THE QUIZ!</h1>'
+    }
+    
+  }
+  
+//for the previous question button
+  
+function previousQuestion() {
+  question--;
+  
+  questionElement.textContent = question;
+  if (question <= 0){
+    questionElement.textContent = 1;
+    
+    question++;
+    
+    questionElement.textContent = question;
+  }
+}
+  
+</script>

@@ -1313,6 +1313,10 @@ video {
   cursor: pointer;
 }
 
+.hover\:border-black\/40:hover {
+  border-color: rgb(0 0 0 / 0.4);
+}
+
 .hover\:bg-indigo-500:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(99 102 241 / var(--tw-bg-opacity));

@@ -1,3 +1,4 @@
+
 const questions = [
   {
     question: "What Type of Framework is Django?",
@@ -69,7 +70,7 @@ function startQuiz() {
   previousBtn.innerHTML = "Previous";
   showQuestion();
 }
-
+//showing the question and its styles
 function showQuestion() {
   resetState();
   let currentQuestion = questions[currentQuestionIndex];
@@ -79,19 +80,8 @@ function showQuestion() {
     const btn = document.createElement("button");
     btn.innerHTML = answer.text;
     btn.classList.add(
-      "flex","items-center",
-      "w-full",
-      "py-4",
-      "pl-5",
-      "m-2",
-      "ml-0",
-      "space-x-2",
-      "border-2",
-      "cursor-pointer",
-      "border-black/10",
-      "rounded-xl",
-      "bg-black/5",
-      "hover:border-black/40"
+      "flex","items-center","w-full","py-4","pl-5","m-2","ml-0","space-x-2","border-2",
+      "cursor-pointer","border-black/10","rounded-xl","bg-black/5","hover:border-black/40","text-black"
     );
     answerButtonsElement.appendChild(btn);
     if (answer.correct) {
@@ -107,15 +97,43 @@ function resetState() {
     answerButtonsElement.removeChild(answerButtonsElement.firstChild);
   }
 }
-
+//selecting the dif answers
 function selectAnswer(e) {
   const selectedBtn = e.target;
   const isCorrect = selectedBtn.dataset.correct === "true";
-  if (isCorrect) {
-    selectedBtn.classList.add("bg-white", "text-black");
+  console.log("Selected Answer:", selectedBtn.innerHTML);
+  console.log("Is Correct:", isCorrect);
+  if (isCorrect == true) {
+    selectedBtn.classList.add("bg-green-500","text-white",);
+    score++
+   
   } else {
-    selectedBtn.classList.add("bg-red", "text-black");
+    selectedBtn.classList.add("bg-red-500","text-white",);
   }
+  Array.from(answerButtonsElement.children).forEach(button => {
+    if (button.dataset.correct === "true"){
+      button.classList.add("bg-green-500","text-white",);
+    }
+    button.disabled = true;
+  });
+  nextBtn.style.display = "Block"
 }
 
+function handleNextButton(){
+  //If less then length of questions it will display the code.
+  currentQuestionIndex++
+  if (currentQuestionIndex < questions.length){
+    showQuestion()
+  }else{
+    showScore()
+  }
+}
+nextBtn.addEventListener("click", ()=> {
+  if (currentQuestionIndex < questions.length){
+    handleNextButton();
+  }else{
+    //restart quiz
+    startQuiz();
+  }
+});
 startQuiz();

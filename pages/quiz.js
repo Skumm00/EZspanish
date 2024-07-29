@@ -59,7 +59,7 @@ const questions = [
 const questionElement = document.getElementById("question");
 const answerButtonsElement = document.getElementById("answer-buttons");
 const nextBtn = document.getElementById("next");
-const previousBtn = document.getElementById("previous");
+let quiztype = "python";
 let currentQuestionIndex = 0;
 let score = 0;
 
@@ -67,7 +67,7 @@ function startQuiz() {
   currentQuestionIndex = 0;
   score = 0;
   nextBtn.innerHTML = "Next";
-  previousBtn.innerHTML = "Previous";
+ 
   showQuestion();
 }
 //showing the question and its styles
@@ -97,6 +97,18 @@ function resetState() {
     answerButtonsElement.removeChild(answerButtonsElement.firstChild);
   }
 }
+
+document.querySelectorAll('button[data-quiz]').forEach(button => {
+  
+    button.addEventListener('click', selectQuiz);
+});
+
+function selectQuiz(e){
+  const SelectedQuiz = e.currentTarget;
+  const QuizType = SelectedQuiz.dataset.quiz;
+  console.log(quiztype);
+}
+
 //selecting the dif answers
 function selectAnswer(e) {
   const selectedBtn = e.target;
@@ -119,6 +131,13 @@ function selectAnswer(e) {
   nextBtn.style.display = "Block"
 }
 
+function showScore(){
+  resetState();
+  questionElement.innerHTML = `Score: ${score} out of ${questions.length}`;
+  nextBtn.innerHTML = "Take Again";
+  nextBtn.style.display = "Block";
+  
+}
 function handleNextButton(){
   //If less then length of questions it will display the code.
   currentQuestionIndex++

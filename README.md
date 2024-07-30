@@ -1,28 +1,26 @@
- <img src="public/tailwindlogo.png" width="300">
+
  
-# Tailwind CSS Template
+# Codefair
 
 
 
-This is a simple template for using tailwindcss with Node.js.
-
-Fork this repl to create your own website.
-The css files will get built automatically when someone visits the main page.
+This is a website where you can practice coding, manage your tasks, and feature a home page. Everything was made by me, even from the quizzes. Why use it? Because it makes alll of your work easier to make and deploy. PS: I'm a beginner so it took some time to get this stuff to work but now you can fully use the entire application to your full liking!
+To use the live demo, you can click on the website link and use the website.
 
 
 
-## Contents
-**index.js**
-contains the code for the webserver. Feel free to tweak it so it fits your needs.
+## Main Content Files
+**index.html**
+here is where the tailwind and HTML code of the main UI is. This is the homepage which the user can see when they launch the server by either downloading it or viewing it via the links on the repo
 
-**input.css**
-contains the tailwind libraries to make it function. You can modify it by following [this guide](https://tailwindcss.com/docs/adding-custom-styles#using-css-and-layer) on https://tailwindcss.com
+**quiz.html**
+Like index.html, here is the UI except it's for the quiz part of the website. To access it you can just click on the links on the navbar. The quiz is where the actual UI is for it.
 
-**tailwind.config.js**
-is responsible for configuring the build process of your css.
+**todo.html**
+Todo.html is where the UI, tailwind, and HTML code is for the todo app where you can put things you want to work on and manage. Also the <script> for it is inside todo.html
 
-**pages/**
-contains your html files. Make sure to put them there.
+**quiz.js**
+where the actual code for quiz.html is, and the logic for it.
 
 **public/**
 contains your images, music and everything that does not belong into pages/. You can also find the css file there that tailwindcss generates

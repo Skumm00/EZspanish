@@ -329,6 +329,7 @@ function startQuiz() {
 
 function selectQuiz(e) {
   const SelectedQuiz = e.currentTarget;
+  document.getElementById("questionslength").innerHTML = questions.length
   quiztype = SelectedQuiz.dataset.quiz.toLowerCase();
   console.log(quiztype);
   document.getElementById("quiztype").innerHTML = quiztype.charAt(0).toUpperCase() + quiztype.slice(1);

@@ -55,6 +55,62 @@ const questions = [
     ],
   },
 ];
+const questions = [
+  {
+    question: "What Type of Framework is React?",
+    answers: [
+      { text: "Web Framework", correct: true },
+      { text: "Backend Framework", correct: false },
+      { text: "Frontend Framework", correct: false },
+      { text: "Full Stack Framework", correct: false },
+    ],
+  },
+  {
+    question: "What Language Type is React?",
+    answers: [
+      { text: "JS", correct: true },
+      { text: "TS", correct: false },
+      { text: "C++", correct: false },
+      { text: "Basic", correct: false },
+    ],
+  },
+  {
+    question: "What does React stand for?",
+    answers: [
+      { text: "Just a name", correct: true },
+      { text: "Reacted Racecars", correct: false },
+      { text: "Restored active typescript", correct: false },
+      { text: "Reacted Trains", correct: false },
+    ],
+  },
+  {
+    question: "How do you ?",
+    answers: [
+      { text: "Check the console", correct: true },
+      { text: "Check the Terminal", correct: false },
+      { text: "Check the code", correct: false },
+      { text: "Check GIT", correct: false },
+    ],
+  },
+  {
+    question: "What is the command to push a commit to the main/local repo?",
+    answers: [
+      { text: "git push ", correct: false },
+      { text: "git pull", correct: false },
+      { text: "git force", correct: false },
+      { text: "git push origin main", correct: true },
+    ],
+  },
+  {
+    question: "What is git?",
+    answers: [
+      { text: "A system to commit and record changes ", correct: true },
+      { text: "A amazing food to eat", correct: false },
+      { text: "A system to avoid hackers and copyright", correct: false },
+      { text: "A website", correct: false },
+    ],
+  },
+];
 
 const questionElement = document.getElementById("question");
 const answerButtonsElement = document.getElementById("answer-buttons");
@@ -103,12 +159,6 @@ document.querySelectorAll('button[data-quiz]').forEach(button => {
     button.addEventListener('click', selectQuiz);
 });
 
-function selectQuiz(e){
-  const SelectedQuiz = e.currentTarget;
-  const QuizType = SelectedQuiz.dataset.quiz;
-  console.log(quiztype);
-}
-
 //selecting the dif answers
 function selectAnswer(e) {
   const selectedBtn = e.target;
@@ -155,4 +205,13 @@ nextBtn.addEventListener("click", ()=> {
     startQuiz();
   }
 });
+
+function selectQuiz(e){
+  const SelectedQuiz = e.currentTarget;
+  quiztype = "python"
+  const QuizType = SelectedQuiz.dataset.quiz;
+  console.log(QuizType);
+  document.getElementById("quiztype").innerHTML = QuizType;
+
+}
 startQuiz();

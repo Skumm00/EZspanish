@@ -7,7 +7,11 @@
 This is a website where you can practice coding, manage your tasks, and feature a home page. Everything was made by me, even from the quizzes. Why use it? Because it makes alll of your work easier to make and deploy. PS: I'm a beginner so it took some time to get this stuff to work but now you can fully use the entire application to your full liking!
 To use the live demo, you can click on the website link and use the website.
 
-
+ #HOW TO RUN THE WEBSITE.
+ OPEN VS CODE OR ANY CODE EDITOR.
+ CLONE THE REPO OR DOWNLOAD IT AND THEN OPEN IT
+ RUN THE SITE USING EXTIONS OR WITH A LIVE SERVER THAT WILL BE OPEN ON YOUR END.
+ **if that doesn't work you can try to use the replit link to open it there and view from there**
 
 ## Main Content Files
 **index.html**

@@ -1,3 +1,9 @@
+const questionElement = document.getElementById("question");
+const answerButtonsElement = document.getElementById("answer-buttons");
+const nextBtn = document.getElementById("next");
+let quiztype = "python";
+let currentQuestionIndex = 0;
+let score = 0;
 
 const questions = [
   {
@@ -55,7 +61,7 @@ const questions = [
     ],
   },
 ];
-const questions = [
+const reactquestions = [
   {
     question: "What Type of Framework is React?",
     answers: [
@@ -84,60 +90,68 @@ const questions = [
     ],
   },
   {
-    question: "How do you ?",
+    question: "How do you install react ?",
     answers: [
-      { text: "Check the console", correct: true },
-      { text: "Check the Terminal", correct: false },
-      { text: "Check the code", correct: false },
-      { text: "Check GIT", correct: false },
+      { text: "You can install it via the terminal", correct: true },
+      { text: "Install it through the web", correct: false },
+      { text: "Type in $reactplzinstall in google", correct: false },
+      { text: "Mannualy install each folder", correct: false },
     ],
   },
   {
-    question: "What is the command to push a commit to the main/local repo?",
+    question: "How do you use classes in react?",
     answers: [
-      { text: "git push ", correct: false },
-      { text: "git pull", correct: false },
-      { text: "git force", correct: false },
-      { text: "git push origin main", correct: true },
+      { text: "class", correct: false },
+      { text: "className", correct: true },
+      { text: "classname", correct: false },
+      { text: "classifier", correct: false },
     ],
   },
   {
-    question: "What is git?",
+    question: "What is jsx?",
     answers: [
-      { text: "A system to commit and record changes ", correct: true },
-      { text: "A amazing food to eat", correct: false },
-      { text: "A system to avoid hackers and copyright", correct: false },
-      { text: "A website", correct: false },
+      { text: "JS and Python combined", correct: false },
+      { text: "The name of a hacker", correct: false },
+      { text: "Javascript and XML", correct: true },
+      { text: "C++ and Python", correct: false },
     ],
   },
 ];
-
-const questionElement = document.getElementById("question");
-const answerButtonsElement = document.getElementById("answer-buttons");
-const nextBtn = document.getElementById("next");
-let quiztype = "python";
-let currentQuestionIndex = 0;
-let score = 0;
 
 function startQuiz() {
   currentQuestionIndex = 0;
   score = 0;
   nextBtn.innerHTML = "Next";
- 
   showQuestion();
 }
-//showing the question and its styles
+
+function selectQuiz(e) {
+  const SelectedQuiz = e.currentTarget;
+  quiztype = SelectedQuiz.dataset.quiz.toLowerCase();
+  console.log(quiztype);
+  document.getElementById("quiztype").innerHTML = quiztype.charAt(0).toUpperCase() + quiztype.slice(1);
+  startQuiz(); // Restart the quiz with the new quiz type
+}
+
+// Showing the question and its styles
 function showQuestion() {
   resetState();
-  let currentQuestion = questions[currentQuestionIndex];
+  let currentQuestion;
+  if (quiztype === "python") {
+    currentQuestion = questions[currentQuestionIndex];
+  } else if (quiztype === "react") {
+    currentQuestion = reactquestions[currentQuestionIndex];
+  } else if (quiztype === "javascript") {
+    currentQuestion = javascriptquestions[currentQuestionIndex];
+  }
   let questionNo = currentQuestionIndex + 1;
   questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
   currentQuestion.answers.forEach((answer) => {
     const btn = document.createElement("button");
     btn.innerHTML = answer.text;
     btn.classList.add(
-      "flex","items-center","w-full","py-4","pl-5","m-2","ml-0","space-x-2","border-2",
-      "cursor-pointer","border-black/10","rounded-xl","bg-black/5","hover:border-black/40","text-black"
+      "flex", "items-center", "w-full", "py-4", "pl-5", "m-2", "ml-0", "space-x-2", "border-2",
+      "cursor-pointer", "border-black/10", "rounded-xl", "bg-black/5", "hover:border-black/40", "text-black"
     );
     answerButtonsElement.appendChild(btn);
     if (answer.correct) {
@@ -155,63 +169,52 @@ function resetState() {
 }
 
 document.querySelectorAll('button[data-quiz]').forEach(button => {
-  
-    button.addEventListener('click', selectQuiz);
+  button.addEventListener('click', selectQuiz);
 });
 
-//selecting the dif answers
+// Selecting the different answers
 function selectAnswer(e) {
   const selectedBtn = e.target;
   const isCorrect = selectedBtn.dataset.correct === "true";
   console.log("Selected Answer:", selectedBtn.innerHTML);
   console.log("Is Correct:", isCorrect);
-  if (isCorrect == true) {
-    selectedBtn.classList.add("bg-green-500","text-white",);
-    score++
-   
+  if (isCorrect) {
+    selectedBtn.classList.add("bg-green-500", "text-white");
+    score++;
   } else {
-    selectedBtn.classList.add("bg-red-500","text-white",);
+    selectedBtn.classList.add("bg-red-500", "text-white");
   }
   Array.from(answerButtonsElement.children).forEach(button => {
-    if (button.dataset.correct === "true"){
-      button.classList.add("bg-green-500","text-white",);
+    if (button.dataset.correct === "true") {
+      button.classList.add("bg-green-500", "text-white");
     }
     button.disabled = true;
   });
-  nextBtn.style.display = "Block"
+  nextBtn.style.display = "block";
 }
 
-function showScore(){
+function showScore() {
   resetState();
   questionElement.innerHTML = `Score: ${score} out of ${questions.length}`;
   nextBtn.innerHTML = "Take Again";
-  nextBtn.style.display = "Block";
-  
+  nextBtn.style.display = "block";
 }
-function handleNextButton(){
-  //If less then length of questions it will display the code.
-  currentQuestionIndex++
-  if (currentQuestionIndex < questions.length){
-    showQuestion()
-  }else{
-    showScore()
+
+function handleNextButton() {
+  currentQuestionIndex++;
+  if (currentQuestionIndex < questions.length) {
+    showQuestion();
+  } else {
+    showScore();
   }
 }
-nextBtn.addEventListener("click", ()=> {
-  if (currentQuestionIndex < questions.length){
+
+nextBtn.addEventListener("click", () => {
+  if (currentQuestionIndex < questions.length) {
     handleNextButton();
-  }else{
-    //restart quiz
+  } else {
     startQuiz();
   }
 });
 
-function selectQuiz(e){
-  const SelectedQuiz = e.currentTarget;
-  quiztype = "python"
-  const QuizType = SelectedQuiz.dataset.quiz;
-  console.log(QuizType);
-  document.getElementById("quiztype").innerHTML = QuizType;
-
-}
 startQuiz();

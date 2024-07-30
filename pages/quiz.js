@@ -117,6 +117,208 @@ const reactquestions = [
     ],
   },
 ];
+const javascriptquestions = [
+  {
+    question: "What is the purpose of the `typeof` operator in JavaScript?",
+    answers: [
+      { text: "To determine the data type of a variable", correct: true },
+      { text: "To convert a variable to a string", correct: false },
+      { text: "To check if a variable is defined", correct: false },
+      { text: "To create a new variable", correct: false },
+    ],
+  },
+  {
+    question: "Which of the following is a correct way to declare a variable in JavaScript?",
+    answers: [
+      { text: "var myVar;", correct: true },
+      { text: "variable myVar;", correct: false },
+      { text: "v myVar;", correct: false },
+      { text: "declare myVar;", correct: false },
+    ],
+  },
+  {
+    question: "What is the output of `console.log(typeof null);`?",
+    answers: [
+      { text: "\"null\"", correct: false },
+      { text: "\"object\"", correct: true },
+      { text: "\"undefined\"", correct: false },
+      { text: "\"string\"", correct: false },
+    ],
+  },
+  {
+    question: "Which method is used to add an element to the end of an array in JavaScript?",
+    answers: [
+      { text: "push()", correct: true },
+      { text: "pop()", correct: false },
+      { text: "shift()", correct: false },
+      { text: "unshift()", correct: false },
+    ],
+  },
+  {
+    question: "What does the `isNaN` function do?",
+    answers: [
+      { text: "Checks if a value is a number", correct: false },
+      { text: "Checks if a value is not a number", correct: true },
+      { text: "Converts a value to a number", correct: false },
+      { text: "Converts a value to a string", correct: false },
+    ],
+  },
+  {
+    question: "Which of the following is a JavaScript framework?",
+    answers: [
+      { text: "React", correct: true },
+      { text: "Django", correct: false },
+      { text: "Laravel", correct: false },
+      { text: "Flask", correct: false },
+    ],
+  },
+  {
+    question: "What is the purpose of the `setTimeout` function in JavaScript?",
+    answers: [
+      { text: "To execute a function after a specified delay", correct: true },
+      { text: "To execute a function repeatedly at specified intervals", correct: false },
+      { text: "To stop the execution of a function", correct: false },
+      { text: "To create a new thread", correct: false },
+    ],
+  },
+  {
+    question: "Which of the following is not a primitive data type in JavaScript?",
+    answers: [
+      { text: "String", correct: false },
+      { text: "Number", correct: false },
+      { text: "Object", correct: true },
+      { text: "Boolean", correct: false },
+    ],
+  },
+  {
+    question: "What is the output of `console.log(2 + '2');`?",
+    answers: [
+      { text: "4", correct: false },
+      { text: "\"22\"", correct: true },
+      { text: "\"4\"", correct: false },
+      { text: "22", correct: false },
+    ],
+  },
+  {
+    question: "Which keyword is used to define a constant in JavaScript?",
+    answers: [
+      { text: "const", correct: true },
+      { text: "let", correct: false },
+      { text: "var", correct: false },
+      { text: "constant", correct: false },
+    ],
+  },
+  {
+    question: "What is a closure in JavaScript?",
+    answers: [
+      { text: "A function having access to its own scope, the scope of the outer function, and the global scope", correct: true },
+      { text: "A function that is immediately invoked", correct: false },
+      { text: "A function that is called after a specified delay", correct: false },
+      { text: "A function that is used to close a file", correct: false },
+    ],
+  },
+  {
+    question: "Which method is used to convert a JSON string into a JavaScript object?",
+    answers: [
+      { text: "JSON.parse()", correct: true },
+      { text: "JSON.stringify()", correct: false },
+      { text: "JSON.convert()", correct: false },
+      { text: "JSON.toObject()", correct: false },
+    ],
+  },
+];
+const djangoquestions = [
+  {
+    question: "What is Django?",
+    answers: [
+      { text: "A high-level Python web framework", correct: true },
+      { text: "A JavaScript library", correct: false },
+      { text: "A CSS framework", correct: false },
+      { text: "A database management system", correct: false },
+    ],
+  },
+  {
+    question: "Which architectural pattern does Django follow?",
+    answers: [
+      { text: "Model-View-Controller (MVC)", correct: false },
+      { text: "Model-View-Template (MVT)", correct: true },
+      { text: "Model-View-Presenter (MVP)", correct: false },
+      { text: "Model-View-ViewModel (MVVM)", correct: false },
+    ],
+  },
+  {
+    question: "Which command is used to start a new Django project?",
+    answers: [
+      { text: "django-admin startproject", correct: true },
+      { text: "django-admin startapp", correct: false },
+      { text: "django-admin createproject", correct: false },
+      { text: "django-admin createapp", correct: false },
+    ],
+  },
+  {
+    question: "What is the purpose of Django's ORM?",
+    answers: [
+      { text: "To interact with the database using Python code", correct: true },
+      { text: "To manage static files", correct: false },
+      { text: "To handle HTTP requests", correct: false },
+      { text: "To create HTML templates", correct: false },
+    ],
+  },
+  {
+    question: "Which file is used to define URL patterns in a Django project?",
+    answers: [
+      { text: "urls.py", correct: true },
+      { text: "views.py", correct: false },
+      { text: "models.py", correct: false },
+      { text: "settings.py", correct: false },
+    ],
+  },
+  {
+    question: "Which of the following are features of Django?",
+    answers: [
+      { text: "Built-in admin interface", correct: true },
+      { text: "Automatic database table creation", correct: true },
+      { text: "Client-side rendering", correct: false },
+      { text: "Built-in support for WebSockets", correct: false },
+    ],
+  },
+  {
+    question: "What is the purpose of Django's 'settings.py' file?",
+    answers: [
+      { text: "To configure the project's settings", correct: true },
+      { text: "To define URL patterns", correct: false },
+      { text: "To create database models", correct: false },
+      { text: "To handle HTTP requests", correct: false },
+    ],
+  },
+  {
+    question: "Which command is used to apply migrations in Django?",
+    answers: [
+      { text: "python manage.py migrate", correct: true },
+      { text: "python manage.py makemigrations", correct: false },
+      { text: "python manage.py runserver", correct: false },
+      { text: "python manage.py createsuperuser", correct: false },
+    ],
+  },
+  {
+    question: "Which of the following are Django template tags?",
+    answers: [
+      { text: "{% if %}", correct: true },
+      { text: "{% for %}", correct: true },
+      { text: "{% while %}", correct: false },
+      { text: "{% switch %}", correct: false },
+    ],
+  },
+  {
+    question: "What is the purpose of Django's 'views.py' file?",
+    answers: [
+      { text: "To define the logic for handling HTTP requests", correct: true },
+      { text: "To configure the project's settings", correct: false },
+      { text: "To define URL patterns", correct: false },
+      { text: "To create database models", correct: false },
+    ],
+  },
+];
 
 function startQuiz() {
   currentQuestionIndex = 0;
@@ -143,6 +345,8 @@ function showQuestion() {
     currentQuestion = reactquestions[currentQuestionIndex];
   } else if (quiztype === "javascript") {
     currentQuestion = javascriptquestions[currentQuestionIndex];
+  } else if (quiztype == "django"){
+    currentQuestion = djangoquestions[currentQuestionIndex];
   }
   let questionNo = currentQuestionIndex + 1;
   questionElement.innerHTML = questionNo + ". " + currentQuestion.question;

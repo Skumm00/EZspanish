@@ -1,6 +1,6 @@
 
  
-# Codefair
+# EZSpanish
 
 
 
@@ -12,7 +12,7 @@ To use the live demo, you can click on the website link and use the website.
  CLONE THE REPO OR DOWNLOAD IT AND THEN OPEN IT
  RUN THE SITE USING EXTIONS OR WITH A LIVE SERVER THAT WILL BE OPEN ON YOUR END.
  **if that doesn't work you can try to use the replit link to open it there and view from there**
-
+Also the link to the website is in the repo
 ## Main Content Files
 **index.html**
 here is where the tailwind and HTML code of the main UI is. This is the homepage which the user can see when they launch the server by either downloading it or viewing it via the links on the repo

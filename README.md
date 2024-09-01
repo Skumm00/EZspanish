@@ -28,3 +28,4 @@ where the actual code for quiz.html is, and the logic for it.
 
 **public/**
 contains your images, music and everything that does not belong into pages/. You can also find the css file there that tailwindcss generates
+![CodeFair](https://github.com/user-attachments/assets/24ca64fd-6179-4eea-85f7-4f24728071d7)
